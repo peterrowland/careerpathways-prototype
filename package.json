@@ -1,0 +1,22 @@
+{
+  "name": "uswds-demo",
+  "version": "1.0.0",
+  "description": "A demo of USWDS",
+  "main": "index.html",
+  "dependencies": {
+    "uswds": "^2.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianseek/uswds-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianseek/uswds-demo/issues"
+  },
+  "homepage": "https://github.com/brianseek/uswds-demo#readme"
+}
