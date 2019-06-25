@@ -2,6 +2,7 @@
 
 ## Setup
 1. Fork this repo.
+1. Clone to your machine
 1. Run `npm install`
 
 ## Prototyping
