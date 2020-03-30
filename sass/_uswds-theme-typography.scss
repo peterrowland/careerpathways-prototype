@@ -7,7 +7,7 @@
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.4.0
+USWDS 2.5.0
 ----------------------------------------
 TYPOGRAPHY SETTINGS
 ----------------------------------------
@@ -77,7 +77,7 @@ Relative font file path
 ----------------------------------------
 */
 
-$theme-font-path: "../fonts";
+$theme-font-path: "../assets/fonts";
 
 /*
 ----------------------------------------
@@ -129,7 +129,31 @@ $theme-typeface-tokens: (
   example-sans-token: (
     display-name: "Example Sans Display Name",
     cap-height: 364px
-  )
+  ),
+  nunito-semi-bold: (
+    dispay-name: "Nunito Semi-bold",
+    cap-height: 364px,
+    stack: (
+      'Helvetica Neue',
+      'Helvetica',
+      'Arial',
+      sans-serif,
+    ),
+    src: (
+      dir: 'nunito',
+      roman: (
+        100: false,
+        200: false,
+        300: 'Nunito-SemiBold',
+        400: 'Nunito-SemiBold',
+        500: false,
+        600: 'Nunito-SemiBold',
+        700: 'Nunito-SemiBold',
+        800: false,
+        900: false,
+      ),
+    ),
+  ),
 );
 
 /*
@@ -170,7 +194,7 @@ $theme-font-type-mono: "roboto-mono";
 $theme-font-type-sans: "source-sans-pro";
 
 // serif
-$theme-font-type-serif: "merriweather";
+$theme-font-type-serif: "nunito-semi-bold";
 
 /*
 ----------------------------------------
@@ -420,3 +444,4 @@ $theme-lead-font-family: "heading";
 $theme-lead-font-size: "lg";
 $theme-lead-line-height: 6;
 $theme-lead-measure: 6;
+
