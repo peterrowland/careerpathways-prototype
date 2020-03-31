@@ -193,3 +193,16 @@ $site-background-color: 'gray-1';
     }
   }
 }
+body {
+  p {
+    @extend %usa-paragraph;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include u-font-family('heading');
+}
