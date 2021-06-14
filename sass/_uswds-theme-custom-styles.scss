@@ -19,3 +19,19 @@ i.e.
 @include u-padding-right('05');
 ----------------------------------------
 */
+
+.usa-nav__secondary {
+   margin-top: units(2);
+ 
+   @include at-media($theme-header-min-width) {
+     // Note: Previius calc() couldn't work. don't hardcode rem vals
+     bottom: units(2); // reduced to fit into the nav bar
+     font-size: font-size($theme-navigation-font-family, "2xs");
+     margin-top: units(1);
+     min-width: calc(
+       #{$theme-search-min-width} + #{units($theme-button-small-width)}
+     );
+     position: absolute;
+     right: units($theme-site-margins-width);
+   }
+}
