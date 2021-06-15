@@ -20,6 +20,7 @@ i.e.
 ----------------------------------------
 */
 
+// change bottom offset of secondary nav so search bar isn't offscreen
 .usa-nav__secondary {
    margin-top: units(2);
  
@@ -34,4 +35,86 @@ i.e.
      position: absolute;
      right: units($theme-site-margins-width);
    }
+}
+
+// force logo text to be white
+.usa-logo a {
+  color: color("white");
+  text-decoration: none;
+}
+
+.usa-nav__secondary-links a {
+  color: color("white");
+}
+
+.usa-header--extended {
+  @include at-media($theme-header-min-width) {
+    padding-top: 0;
+
+    .usa-nav__primary-item > .usa-current,
+    .usa-nav__primary-item > .usa-nav__link:hover {
+      @include nav-border-extended;
+    }
+
+    // Don't show extended border if dropdown is active.
+    .usa-nav__link[aria-expanded="true"]::after,
+    .usa-nav__link[aria-expanded="true"]:hover::after {
+      display: none;
+    }
+  }
+
+  .usa-nav {
+    @include at-media($theme-header-min-width) {
+      border-top: 0px solid color("primary");
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
+
+.usa-header {
+  @include clearfix;
+  @include typeset($theme-header-font-family);
+  @include border-box-sizing;
+  z-index: z-index($z-index-header);
+
+  a {
+    border-bottom: none;
+  }
+
+  // The search <form>
+  .usa-search {
+    @include at-media($theme-header-min-width) {
+      float: right;
+    }
+  }
+
+  // Accessibility: The <div> with search role
+  [role="search"] {
+    @include at-media($theme-header-min-width) {
+      float: right;
+      max-width: calc(
+        #{$theme-search-min-width} + #{units($theme-button-small-width)}
+      );
+      width: 100%;
+    }
+  }
+
+  // The search <input>
+  [type="search"] {
+    min-width: 0; // Fix a Firefox display quirk
+  }
+
+  + .usa-hero {
+    @include at-media($theme-header-min-width) {
+      border-top: units(1px) solid color("white");
+    }
+  }
+
+  + .usa-section,
+  + main {
+    @include at-media($theme-header-min-width) {
+      border-top: 0px solid color("base-lighter");
+    }
+  }
 }

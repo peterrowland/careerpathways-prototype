@@ -127,7 +127,7 @@ $theme-typeface-tokens: (
     cap-height: 364px
   ),
   lato: (
-    display-name: "Lato",
+    display-name: "lato",
     cap-height: 364px
   )
 );
@@ -260,7 +260,7 @@ $theme-font-serif-custom-src: (
 */
 
 $theme-font-sans-custom-src: (
-  dir: 'fonts/lato',
+  dir: '../fonts/lato',
   roman: (
     100: false,
     200: false,
