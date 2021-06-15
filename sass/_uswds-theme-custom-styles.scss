@@ -107,7 +107,7 @@ i.e.
 
   + .usa-hero {
     @include at-media($theme-header-min-width) {
-      border-top: units(1px) solid color("white");
+      border-top: units(1px) solid color("base-lightest");
     }
   }
 
@@ -118,3 +118,7 @@ i.e.
     }
   }
 }
+
+ .usa-button--secondary {
+   color: color("base-lightest")
+ }
