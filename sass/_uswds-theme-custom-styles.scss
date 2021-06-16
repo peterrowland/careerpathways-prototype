@@ -37,7 +37,7 @@ i.e.
    }
 }
 
-// force logo text to be white
+// force logo text to be white and not underline
 .usa-logo a {
   color: color("white");
   text-decoration: none;
@@ -117,20 +117,4 @@ i.e.
       border-top: 0px solid color("base-lighter");
     }
   }
-}
-
- .usa-button--secondary{
-   color: color("base-lightest")
- }
-
- .usa-nav__primary button  {
-   color: color("base-lightest")
- }
-
- .usa-nav__link a {
-  color: color("base-lightest")
- }
-
- .usa-nav__primary>.usa-nav__primary-item>a {
-  color: color("base-lightest")
 }
