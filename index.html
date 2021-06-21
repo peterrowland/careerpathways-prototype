@@ -57,58 +57,58 @@
   </div>
 </div>
     
-<div class="usa-overlay" ></div>
-
-<header class="usa-header usa-header--extended bg-primary" role="banner">
-  <div class="usa-navbar">
-    <div class="usa-logo" id="extended-logo">
-      <em class="usa-logo__text "><a href="/" title="Home" aria-label="Home">Career Pathways</a></em>
+<header class="usa-header usa-header--extended bg-primary " role="banner">
+  <div class="usa-navbar site-header-navbar">
+    <div class="usa-logo site-logo" id="extended-logo">
+      <img src="./img/logo-pathwayswhitenotreal.svg">
     </div>
+    <button class="usa-menu-btn">Menu</button>
   </div>
-  <nav role="navigation" class="usa-nav">
-    <div class="usa-nav__inner">
 
-      <button class="usa-nav__close"><img src="./img/close.svg" alt="close"></button>
-  
-  <ul class="usa-nav__primary usa-accordion border-top border-accent-cool">
-    <li class="usa-nav__primary-item">
-      <button class="usa-accordion__button usa-nav__link usa-current" aria-expanded="false" aria-controls="extended-nav-section-one">
-        <span>Current section</span>
-      </button>
-    </li>
-    
-    <li class="usa-nav__primary-item text-base-lightest">
-    <a href="javascript:void(0)" class="usa-nav__link">
-      
-        <span>Simple link</span>
-      
-    </a>
-  
+  <nav class="usa-nav bg-primary" role="navigation">
+    <div class="grid-container border-top border-accent-cool">
+
+    <ul class="usa-nav__primary usa-accordion">
+      <li class="usa-nav__primary-item">
+        <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-nav-section-one">
+          <span>Current section</span>
+        </button>
       </li>
+      
+      <li class="usa-nav__primary-item">
+      <a href="javascript:void(0)" class="usa-nav__link">        
+          <span>Simple link</span>
+      </a>
+      </li>
+      
+    </ul> <!-- nav__primary-->
     
-
-  
-  </ul> <!-- nav__primary-->
-
     <div class="usa-nav__secondary">
-    <ul class="usa-nav__secondary-links text-base-lightest"><li class="usa-nav__secondary-item">
-      <a href="#">Privacy policy</a>
-    </li><li class="usa-nav__secondary-item">
-      <a href="">Latest updates</a>
-    </li></ul>
-    
-    <form class="usa-search usa-search--small ">
-      <div role="search">
-        <label class="usa-sr-only" for="extended-search-field-small">Search small</label>
-        <input class="usa-input" id="extended-search-field-small" type="search" name="search">
-        <button class="usa-button usa-button--secondary" type="submit"><span class="usa-sr-only">Search</span></button>
-      </div>
-    </form>
-    </div> <!-- nav secondary-->
-  </div> <!-- nav inner-->
-</nav>
-</header>
+      <ul class="usa-nav__secondary-links">
+        <li class="usa-nav__secondary-item">
+          <a href="">Privacy Policy</a>
+        </li>
+        <li class="usa-nav__secondary-item">
+          <a href="">Latest Updates</a>
+        </li>
+      </ul>
 
+      <form class="usa-search usa-search--small " role="search">
+        <label class="usa-sr-only" for="extended-search-field-en-small">
+          Search
+        </label>
+        <input class="usa-input" id="extended-search-field-en-small" type="search" name="search">
+        <button class="usa-button usa-button--secondary" type="submit">
+          <span class="usa-sr-only">Search</span>
+        </button>
+      </form>
+    </div>
+
+    
+  </div> <!-- nav inner-->
+  </nav>
+
+  </header>
 
 <main id="main-content">
   
@@ -133,7 +133,7 @@
         <button class="usa-button usa-button--secondary text-base-lightest">Find a program</button>
       </div>
       <div class="tablet:grid-col-5 usa-prose text-base-lightest">
-        <img class="usa-media-block__img"  src="./img/circle-124.png" alt="Alt text"> 
+        <img class="usa-media-block__img"  src="./img/cp-hero.png" alt="Alt text"> 
 
       </div>
     </div>
@@ -153,7 +153,7 @@
         <button class="usa-button usa-button--outline margin-right-4">Read our recent publications</button>
       </div>
       <div class="tablet:grid-col-4">
-        <img class="usa-media-block__img"  src="./img/circle-124.png" alt="Alt text"> 
+        <img class="usa-media-block__img"  src="./img/img-womangraduate.png" alt="Alt text"> 
       </div>
     </div>
 </section>
@@ -170,7 +170,7 @@
       <div class="tablet:grid-col-12">
         <ul class="usa-card-group">
           <li class="tablet:grid-col-6 usa-card">
-            <div class="usa-card__container">
+            <div class="usa-card__container shadow-2">
               <header class="usa-card__header">
                 <h2 class="usa-card__heading">Pathways for Advancing Careers and Education (PACE)</h2>
               </header>
@@ -184,7 +184,7 @@
             </div>
           </li>        
           <li class="tablet:grid-col-6 usa-card">
-            <div class="usa-card__container">
+            <div class="usa-card__container shadow-2">
               <header class="usa-card__header">
                 <h2 class="usa-card__heading">Health Profession Opportunity Grants (HPOG 1.0)</h2>
               </header>
@@ -198,7 +198,7 @@
             </div>
           </li>
           <li class="tablet:grid-col-6 usa-card">
-            <div class="usa-card__container">
+            <div class="usa-card__container shadow-2">
               <header class="usa-card__header">
                 <h2 class="usa-card__heading">2nd Generation of Health Profession Opportunity Grants (HPOG 2.0 National Evaluation)</h2>
               </header>
@@ -212,7 +212,7 @@
             </div>
           </li>
           <li class="tablet:grid-col-6 usa-card">
-            <div class="usa-card__container">
+            <div class="usa-card__container shadow-2">
               <header class="usa-card__header">
                 <h2 class="usa-card__heading">Tribal Evaluation of the 2nd Generation of HPOG (Tribal HPOG 2.0 Evaluation)</h2>
               </header>
@@ -229,23 +229,6 @@
       </div>
     </div>
   </div>
-</section>
-
-<section class="usa-section">
-  <div class="grid-container">
-    <div class="grid-row grid-gap">
-      <div class="tablet:grid-col-8">
-        <h2 class="text-primary font-heading-2xl">How Career Pathways Works</h2>
-        <p class="font-heading-lg">Career pathways programs connect education, training, and related supports in a pathway that is intended to lead to employment in a specific sector or occupation or to further training.</p>
-        <span><strong>Title for this section</strong></span>
-        <p>Career pathways programs connect education, training, and related supports in a pathway that is intended to lead to employment in a specific sector or occupation or to further training.</p>
-        <button class="usa-button usa-button--outline margin-right-4">See the framework</button>
-        <button class="usa-button usa-button--outline margin-right-4">Read our recent publications</button>
-      </div>
-      <div class="tablet:grid-col-4">
-        <img class="usa-media-block__img"  src="./img/circle-124.png" alt="Alt text"> 
-      </div>
-    </div>
 </section>
 
 <section class="usa-section bg-accent-cool-lighter">
