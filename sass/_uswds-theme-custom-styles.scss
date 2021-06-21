@@ -65,7 +65,7 @@ i.e.
 
   .usa-nav {
     @include at-media($theme-header-min-width) {
-      border-top: 0px solid color("primary");
+      border-top: 1px solid color("primary-lighter");
       padding: 0;
       width: 100%;
     }
@@ -133,7 +133,6 @@ i.e.
     border-top: 0px;
     border-bottom: 0px;
   }
-
 }
 
 // make outline buttons turn blue on highlight
@@ -142,7 +141,150 @@ i.e.
   color: color("base-lightest");
 }
 
-.usa-nav__link:hover {
-  color: color("primary-lighter");
-  background-color: color("primary");
+
+// Primary navigation
+// ---------------------------------
+
+.usa-nav__primary {
+  // Until the $theme-header-width,
+  // use the usa-nav-list styles for the slide-in nav
+  @include at-media-max($theme-header-min-width) {
+    @include nav-list("nav");
+    margin-top: units(3);
+    order: 2;
+
+    a {
+      @include u-padding-y(1.5);
+    }
+  }
+
+  // At $theme-header-width and wider...
+  @include at-media($theme-header-min-width) {
+    display: flex;
+  }
+
+  // all nav items in the nav
+  .usa-nav__primary-item {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  // just level 1 nav items...
+  > .usa-nav__primary-item {
+    line-height: line-height($theme-navigation-font-family, 2);
+    @include at-media($theme-header-min-width) {
+      font-size: font-size($theme-navigation-font-family, "2xs");
+      line-height: line-height($theme-navigation-font-family, 1);
+    }
+
+    // ...and their direct links
+    > a {
+      @include at-media($theme-header-min-width) {
+        @include primary-nav-link;
+        color: color($nav-link-color);
+        display: block;
+        font-weight: font-weight("bold");
+
+        &:hover {
+          color: color("primary-lighter");
+        }
+      }
+    }
+  }
+
+  a {
+    @include at-media($theme-header-min-width) {
+      @include u-padding-y(1);
+    }
+  }
+
+  button {
+    $button-vertical-offset: 53%; // XXX: Magic number
+
+    @include button-unstyled;
+    color: color($nav-link-color);
+    font-weight: font-weight("normal");
+    line-height: line-height($theme-navigation-font-family, 2);
+    padding: units(1.5) units(2);
+    text-decoration: none;
+
+    @include at-media($theme-header-min-width) {
+      @include primary-nav-link;
+      font-size: font-size($theme-navigation-font-family, "2xs");
+      font-weight: font-weight("bold");
+    }
+
+    &:hover {
+      color: color("primary-lighter");
+      background-color: color("base-lightest");
+      text-decoration: none;
+
+      @include at-media($theme-header-min-width) {
+        background-color: transparent;
+      }
+    }
+
+    &[aria-expanded="false"] {
+      /* stylelint-disable-line selector-no-qualifying-type */
+      @include add-background-svg("plus-alt");
+      background-position: right 0 center;
+      background-size: units($nav-link-accordion-icon-size);
+
+      @include at-media($theme-header-min-width) {
+        @include add-background-svg("angle-arrow-down");
+        background-size: units($nav-link-arrow-icon-size);
+        background-position: right units(2) top $button-vertical-offset;
+      }
+
+      &:hover {
+        @include at-media($theme-header-min-width) {
+          @include add-background-svg("angle-arrow-down-primary");
+        }
+      }
+    }
+
+    &[aria-expanded="true"] {
+      /* stylelint-disable-line selector-no-qualifying-type */
+      @include add-background-svg("minus-alt");
+      background-position: right 0 center;
+      background-size: units($nav-link-accordion-icon-size);
+
+      @include at-media($theme-header-min-width) {
+        @include add-background-svg("angle-arrow-up-white");
+        @include add-knockout-font-smoothing;
+        background-size: units($nav-link-arrow-icon-size);
+        background-color: color("primary-darker");
+        background-position: right units(2) top $button-vertical-offset;
+        color: color("white");
+      }
+    }
+  }
+
+  .usa-accordion__button {
+    span {
+      @include at-media($theme-header-min-width) {
+        margin-right: 0;
+        padding-right: units(2);
+      }
+    }
+  }
 }
+
+.home--separator-blue{
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  border: 4px solid rgba(7, 100, 141, 0.1);
+  background: rgba(7, 100, 141, 0.1);
+  width: 32px;
+}
+
+.home--separator-green{
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  border: 4px solid rgba(127, 177, 53, 0.1);
+  background: rgba(127, 177, 53, 0.1);
+  width: 32px;
+}
+
+
