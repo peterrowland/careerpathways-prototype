@@ -290,3 +290,16 @@ i.e.
 .usa-media-block__body {
   justify-content: center;
 }
+
+.agency-footer {
+  display: flex;
+}
+
+.agency-footer__logo {
+  max-height: 2rem;
+  margin-right: 1rem;
+}
+
+.agency-footer__name {
+  margin: 0;
+}
